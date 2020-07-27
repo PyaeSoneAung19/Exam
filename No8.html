@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Text Area Using Jquery </title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('#click').click(function(e){
+				e.preventDefault();
+				let comment = $('#comment').val();
+				$('#result').text(comment);
+			})
+		})
+	</script>
+</head>
+<body>
+	<div style="width:80%; background-color:white; margin:30px auto;" align="center">
+		<h3> Comment </h3>
+			<form>
+				<textarea id="comment" id="commet" style="width: 600px; height: 300px;"></textarea> <br><br> <br>
+				<button id="click"> Click </button>
+			</form> <br> 
+			<label id="result"></label>
+		
+	</div>
+</body>
+</html>

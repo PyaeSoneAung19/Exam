@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Calculator </title>
+	<script type="text/javascript">
+		function calculate() {
+			let first_num = parseInt(document.myform.fn.value);
+			let second_num = parseInt(document.myform.sn.value);
+			document.getElementById("result").textContent = first_num + second_num;
+		}
+	</script>
+</head>
+<body>
+	<h1> Calculator </h1>
+	<form name="myform">
+		First Number : <input type="number" name="fn"> <br> <br>
+		Second Number : <input type="number" name="sn"> <br> <br>
+
+		<input type="button" value="Calculate" onclick="calculate()"> <br> <br>
+
+		Result : <label id="result"></label>
+	</form>
+</body>
+</html>

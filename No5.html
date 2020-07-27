@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> No.5 </title>
+	<script type="text/javascript">
+	
+		function calculate() {
+			let win = parseInt(document.myform.win.value);
+			let draw = parseInt(document.myform.draw.value);
+			let lost = parseInt(document.myform.lost.value);
+
+			document.getElementById("result").textContent  = ((win*3) + (draw) + (lost*0));
+		}
+		
+	</script>
+</head>
+<body>
+	<form name="myform">
+		Win  : <input type="number" name="win"> <br> <br>
+		Draw  : <input type="number" name="draw"> <br> <br>
+		Lose : <input type="number" name="lost"> <br> <br>
+		<input type="button" value="Calculate" onclick="calculate()"> <br> <br>
+		Points : <label id="result"></label>
+	</form>
+</body>
+</html>

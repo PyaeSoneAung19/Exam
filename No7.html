@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Calendar Using JQuery </title>
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript">
+
+		$(document).ready(function(){
+
+
+			let date = new Date();
+			let month = parseInt(date.getMonth());
+			let day = date.getDay();
+			let year = date.getFullYear();
+			let Months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+			let html = "";
+			let num = 0;
+
+			$('#month').text(Months[month]);
+			$('#year').text(year);
+
+			// alert(day);
+
+			for(let i=1; i<=5; i++){
+				html += `
+					<tr>
+						<td> ${num++} </td>
+						<td> ${num++} </td>
+						<td> ${num++}  </td>
+						<td> ${num++}  </td>
+						<td> ${num++} </td>
+						<td> ${num++}  </td>
+						<td> ${num++}  </td>
+					</tr>
+				`;
+				$('#tbody').html(html);
+			}
+
+		})
+	</script>
+</head>
+<body>
+	<strong><span id="month"></span> <label id="year"></label></strong>
+	<table border="1" width="600px">
+		<tr>
+			<th> Sun </th>
+			<th> Mon </th>
+			<th> Tue </th>
+			<th> Wed </th>
+			<th> Thurs </th>
+			<th> Fri </th>
+			<th> Sat </th>
+		</tr>
+		<tbody id="tbody">
+			
+		</tbody>
+	</table>
+</body>
+</html>
+<!-- 
+				for(let i=1; i<=convertmonth; i++){
+					total_interest = total_interest + res_interest;
+					html +=
+					`<tr> 
+						<td> Month # ${i} </td>
+						<td> ${loan_amount} </td>
+						<td> ${res_interest} </td>
+						<td> ${monthlyAmount} </td>
+					 </tr>`;
+
+					 $('#tbody').html(html);
+
+					 loan_amount = principle;
+					 res_interest = parseInt((interest * principle).toFixed()) + 1;
+					 principle = parseInt(loan_amount - monthlyAmount)+ parseInt(res_interest);
+					 
+				} -->
